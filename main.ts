@@ -1,8 +1,13 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { day01 } from "@day/01";
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+const day = Deno.args[0];
+const part = Deno.args[1];
+
+console.log(await answer(day, part));
+
+async function answer(day: string, part: string) {
+  switch (day) {
+    case "01":
+      return await day01(part);
+  }
 }
