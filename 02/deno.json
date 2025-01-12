@@ -1,0 +1,4 @@
+{
+  "name": "@day/02",
+  "exports": "./mod.ts"
+}
